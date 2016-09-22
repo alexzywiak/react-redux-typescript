@@ -1,0 +1,17 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "eofline": false,
+    "interface-name": false,
+    "max-line-length": false,
+    "member-access": false,
+    "member-ordering": [true, "variables-before-functions"],
+    "no-consecutive-blank-lines": false,
+    "no-empty": false,
+    "no-trailing-whitespace": false,
+    "no-var-requires": false,
+    "quotemark": [true, "single", "jsx-double"],
+    "variable-name": [true, "allow-leading-underscore", "allow-pascal-case"],
+    "ban": [true, ["describe", "only"], ["it", "only"]]
+  }
+}
