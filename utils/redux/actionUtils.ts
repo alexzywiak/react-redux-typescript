@@ -9,7 +9,7 @@ export function createActionCreator<TPayload>(actionType: ActionType<TPayload>):
 }
 
 export function actionType<TPayload>() {
-  return null as ActionType<TPayload>;
+  return {} as ActionType<TPayload>;
 }
 
 export function createActionConstantsMap<T extends ActionTypeMap>(prefix: string, input: T): T {

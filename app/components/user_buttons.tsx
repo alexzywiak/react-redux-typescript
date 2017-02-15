@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import { bindActionCreators, RootState, Dispatch, returnType } from '../../utils/redux';
 import { sendFlashMessage } from '../../actions/user_buttons/actions';
 
+function mapStateToProps<UserButtonsStateProps>(state: RootState) {
+    return {};
+}
+
 function mapDispatchToProps<UserButtonsDispatchProps>(dispatch: Dispatch) {
     return bindActionCreators({
         sendFlashMessage
@@ -13,7 +17,7 @@ interface UserButtonsOwnProps {
 }
 
 const dispatchGeneric = returnType(mapDispatchToProps);
-const stateGeneric = returnType(null);
+const stateGeneric = returnType(mapStateToProps);
 
 type UserButtonsDispatchProps = typeof dispatchGeneric;
 type UserButtonsStateProps = typeof stateGeneric;
@@ -31,4 +35,4 @@ class UserButtons extends React.Component<UserButtonsProps, {}> {
     }
 }
 
-export default connect<UserButtonsStateProps, UserButtonsDispatchProps, {}>(null, mapDispatchToProps)(UserButtons);
+export default connect<UserButtonsStateProps, UserButtonsDispatchProps, {}>(mapStateToProps, mapDispatchToProps)(UserButtons);

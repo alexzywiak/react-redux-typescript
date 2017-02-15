@@ -7,6 +7,9 @@ import createStore from './app/createStore';
 const store = createStore();
 console.log('index');
 const rootEl = document.getElementById('container');
+if (rootEl === null) {
+  throw new Error("react root container not found");
+}
 
 const renderApp = () => {
   ReactDOM.render(
