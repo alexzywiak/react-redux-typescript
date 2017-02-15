@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "rm -rf dist && webpack && webpack-dev-server",
+    "start": "git clean -f -x dist && webpack && webpack-dev-server",
     "postinstall": "typings install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
