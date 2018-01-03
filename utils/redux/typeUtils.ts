@@ -3,5 +3,5 @@ interface Func<T> {
 }
 
 export function returnType<T>(func: Func<T>) {
-    return null as T;
+    return {} as T;
 }
